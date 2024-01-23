@@ -1,27 +1,21 @@
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import {  FetchComponentType } from "../Types";
-import React from "react";
-
-const FetchComponent:React.FC<FetchComponentType> = () => {
-  
-
-  
-  const getTodos = () => {
-    return axios.get("https://jsonplaceholder.typicode.com/todos/1");
-  };
-  const { data }= useQuery({ queryKey: ["todos"], queryFn: getTodos });
+import { useJsonPlaceholderData } from "../hooks/useJsonPlaceholderData";
 
 
-  
- 
+const FetchComponent = () => {
+  const { isLoading,isError,error,data }= useJsonPlaceholderData();
+  if(isLoading)
+  return <h1>Loading....</h1>
+  else if(isError)
+  return <h3>{error.message}</h3>
+  {console.log(data)}
   return (
-    <div>
-    <p>{data?.data.title}</p>
-    <p>{data?.data.completed+""}</p>
-    
-    </div>
-  );
+    <>
+    <div> userId - {data?.data.userId}</div>
+    <div> Id - {data?.data.id}</div>
+    <div> Title - {data?.data.title}</div>
+    <div> completed - {data?.data.completed + ""}</div>
+    </>
+  )
 };
 
 export default FetchComponent;

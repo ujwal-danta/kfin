@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 // import Button from '../Button/Button';
 import Button from '../Button/Button';
 
@@ -23,8 +23,8 @@ function InputTextCom(){
             <label>Password</label>
             <input type='password' id='Password'  onChange={(event) => setPass(event.target.value)}/>
             {/* <button type='submit' onClick={handleSubmit}>Login</button> */}
-            <Button name="Submit" ButtonClick ={handleSubmit}/>
-            <Button name="Reset" ButtonClick={resetValue}/>
+            <Button name="Submit" buttonClick ={handleSubmit}/>
+            <Button name="Reset" buttonClick={resetValue}/>
         </div>
     )
 }

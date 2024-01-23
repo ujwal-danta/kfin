@@ -1,11 +1,16 @@
 import React from 'react';
-import { ButtonProps } from '../../Types';
+import { buttonProps } from '../../Types/Button.types';
 
-const Button:React.FC<ButtonProps> = React.memo(({name, ButtonClick}) => {
+const Button = React.memo(({name, buttonClick}:buttonProps) => {
 
   return (
     <div>
-      <button onClick={ButtonClick} >{name}</button>    </div>
+      <button 
+      className='border-black border-2'
+      onClick={buttonClick} 
+      >{name}
+      </button>
+    </div>
   );
 });
 
