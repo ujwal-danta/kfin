@@ -1,8 +1,9 @@
 import { Form, Formik, FormikHelpers } from "formik";
 import React, { useState } from "react";
 import * as Yup from "yup";
-import TextInput from "../TextInput/TextInput";
-import { FeildLabelsProps } from "../../Types";
+import { FeildLabelsProps } from "Types";
+import TextInput from "@components/TextInput/TextInput";
+
 
 const LoginForm = React.memo(() => {
   const fieldLabels: FeildLabelsProps = {

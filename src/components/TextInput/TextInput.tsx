@@ -1,6 +1,7 @@
 import React from "react";
 import { useField } from "formik";
-import { TextInputProps } from "../../Types";
+import { TextInputProps } from "Types";
+
 
 const TextInput: React.FC<TextInputProps> = React.memo(
   ({ label, onValueChange, ...props }) => {

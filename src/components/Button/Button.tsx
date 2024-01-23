@@ -1,5 +1,6 @@
+import { buttonProps } from 'Types/Button.types';
 import React from 'react';
-import { buttonProps } from '../../Types/Button.types';
+
 
 const Button = React.memo(({name, buttonClick}:buttonProps) => {
 
