@@ -1,4 +1,4 @@
-import { useJsonPlaceholderData } from "../hooks/useJsonPlaceholderData";
+import { useJsonPlaceholderData } from "@hooks/useJsonPlaceholderData";
 
 
 const FetchComponent = () => {

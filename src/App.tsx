@@ -1,5 +1,6 @@
-import FetchComponent from "./api/FetchComponent"
-import Button from "./components/Button/Button"
+import FetchComponent from "@api/FetchComponent"
+import Button from "@components/Button/Button"
+
 
 
 

@@ -1,5 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src", // This is to avoid adding the ./src prefix to each path below.
+    "paths": {
+      "@components/*": ["components/*"],
+      "@api/*": ["api/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@config/*": ["config/*"],
+      "@types/*": ["types/*"],
+    },
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
